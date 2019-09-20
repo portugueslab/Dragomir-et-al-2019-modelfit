@@ -1,1 +1,1 @@
-julia -e 'using WebIO;WebIO.install_jupyter_nbextension();WebIO.install_jupyter_labextension()'
+julia -e 'import Pkg;Pkg.add("WebIO");using WebIO;WebIO.install_jupyter_nbextension();WebIO.install_jupyter_labextension()'

@@ -288,9 +288,9 @@ end
 
 
 function continuous_colors_from_rois(rois; h_start=90, h_end=350, l_start=60, l_end=10, τ_threshold=10, chroma=50)
-    return RGB.(LCHuvA{Float32}.(scale_lin.(rois[:τw],0,τ_threshold, l_start,l_end),
-                                scale_lin.(rois[:τw],0,τ_threshold, 60, 40),
-                                scale_lin.(rois[:ei_θ], 0.0,1.9, h_start, h_end)))
+    return RGB.(LCHuvA{Float32}.(scale_lin.(rois.τw,0,τ_threshold, l_start,l_end),
+                                scale_lin.(rois.τw,0,τ_threshold, 60, 40),
+                                scale_lin.(rois.ei_θ, 0.0,1.9, h_start, h_end)))
 
 end
 
